@@ -44,6 +44,5 @@
    <url>http://35.223.58.148:8081/repository/samplesnapshot/</url>
   </snapshotRepository>
   </repository>
-  <snapshotRepository>
  </distributionManagement>
   </project>
