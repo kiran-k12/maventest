@@ -38,7 +38,7 @@
   <repository>
    <id>nexus</id>
    <name>samplerepo</name>
-   <url>http://35.223.58.148:8081/repository/samplerepo/</url>
+   <url>http://35.223.58.148:8081/service/rest/repository/browse/samplerepo/</url>
       </repository>
       <snapshotRepository>
     <id>nexus</id>
