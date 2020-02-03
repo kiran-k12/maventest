@@ -39,10 +39,12 @@
    <id>nexus</id>
    <name>samplerepo</name>
    <url>http://35.223.58.148:8081/repository/samplerepo/</url>
+      </repository>
+      <snapshotRepository>
     <id>nexus</id>
    <name>samplesnapshot</name>
    <url>http://35.223.58.148:8081/repository/samplesnapshot/</url>
   </snapshotRepository>
-  </repository>
+
  </distributionManagement>
   </project>
