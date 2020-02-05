@@ -5,12 +5,12 @@ pipeline{
     }
 
 stages{
-	stage("Clear Environment"){
-            steps{
-                deleteDir()
+	//stage("Clear Environment"){
+         //   steps{
+          //      deleteDir()
                 
-            } 
-         }
+           // } 
+         //}
       stage('Build & Package') {
 	      steps{
     withSonarQubeEnv('sonar') {
