@@ -11,17 +11,11 @@ stages{
                 
             } 
          }
-      stage('Sonarqube analysis') {
-    steps {
-    script {
-             scannerHome = tool 'SONAR_RUNNER_4.2';
-        }
-     withSonarQubeEnv('SonarQube') {
-         bat "${scannerHome}/bin/sonar-scanner.bat" 
+      stage('Build & Package') {
+    withSonarQubeEnv('sonar') {
+        sh 'mvn clean package sonar:sonar'
     }
-
-    }
-        }
+}
 
 
   }
