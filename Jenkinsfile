@@ -12,9 +12,11 @@ stages{
             } 
          }
       stage('Build & Package') {
+	      step{
     withSonarQubeEnv('sonar') {
         sh 'mvn clean package sonar:sonar'
     }
+   }
 }
 
 
