@@ -5,23 +5,18 @@ pipeline{
     }
 
 stages{
-	stage("Clear Environment"){
-            steps{
-                deleteDir()
-                
-            } 
-         }
-      stage('Sonarqube analysis') {
+	
+      stage('Sonarqube') {
+    environment {
+        scannerHome = tool 'SONAR_RUNNER_4.2'
+    }
     steps {
-    script {
-             scannerHome = tool 'SONAR_RUNNER_4.2';
+        withSonarQubeEnv('sonar') {
+            sh "/home/divyasekaran94/sonar-scanner/bin/sonar-scanner"
         }
-     withSonarQubeEnv('SonarQube') {
-         bat "${scannerHome}/bin/sonar-scanner.bat" 
+        
     }
-
-    }
-        }
+}
 
   }
 }
