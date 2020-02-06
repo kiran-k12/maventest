@@ -12,7 +12,16 @@ stages{
     }
     steps {
         withSonarQubeEnv('sonar') {
-            sh "/home/divyasekaran94/sonar-scanner/bin/sonar-scanner"
+            sh "mvn clean package sonar:sonar"
+		//'-Dsonar.projectKey=sonartest7 ' +
+		//'-Dsonar.projectName=sonartest7 ' +
+		//'-Dsonar.projectVersion=1.0 ' +
+		//'-Dsonar.sources= $PWD/src/main/java/ ' +
+		//Language
+		//'-Dsonar.language=java ' +
+		//'-Dsonar.java.binaries=./target/classes ' +
+		//Encoding of the source files
+		//'-Dsonar.sourceEncoding=UTF-8'
         }
         
     }
