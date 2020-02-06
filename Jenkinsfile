@@ -13,7 +13,7 @@ stages{
     steps {
         withSonarQubeEnv('sonar') {
             sh "/home/divyasekaran94/sonar-scanner/bin/sonar-scanner" +
-		'-Dsonar.projectKey=sonartest7 ' +
+		//'-Dsonar.projectKey=sonartest7 ' +
 		'-Dsonar.projectName=sonartest7 ' +
 		'-Dsonar.projectVersion=1.0 ' +
 		'-Dsonar.sources= $PWD/src/main/java/ ' +
