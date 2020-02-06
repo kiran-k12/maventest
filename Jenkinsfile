@@ -5,20 +5,18 @@ pipeline{
     }
 
 stages{
-	//stage("Clear Environment"){
-         //   steps{
-          //      deleteDir()
-                
-           // } 
-         //}
-      stage('Build & Package') {
-	      steps{
-    withSonarQubeEnv('sonar') {
-        sh 'mvn clean package sonar:sonar'
+	
+      stage('Sonarqube') {
+    environment {
+        scannerHome = tool 'SONAR_RUNNER_4.2'
     }
-   }
+    steps {
+        withSonarQubeEnv('sonar') {
+            sh "/home/divyasekaran94/sonar-scanner/bin/sonar-scanner"
+        }
+        
+    }
 }
-
 
   }
 }
