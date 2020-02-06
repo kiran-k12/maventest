@@ -12,7 +12,7 @@ stages{
     }
     steps {
         withSonarQubeEnv('sonar') {
-            sh "clean package sonar:sonar" 
+            sh "mvn clean package sonar:sonar"
 		//'-Dsonar.projectKey=sonartest7 ' +
 		//'-Dsonar.projectName=sonartest7 ' +
 		//'-Dsonar.projectVersion=1.0 ' +
