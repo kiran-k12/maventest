@@ -26,17 +26,17 @@ stages{
         
     }
 }
-   post {
-      always {
-        junit '**/reports/junit/*.xml'
-      }
-jacoco(
-    execPattern: '**/path_to_file/jacoco.exec',
-    classPattern: '**/coverage/**',
-    sourcePattern: '**/coverage/**',
-    inclusionPattern: '**/*.class'
-)
-   } 
+  // post {
+     // always {
+      //  junit '**/reports/junit/*.xml'
+     // }
+//jacoco(
+   // execPattern: '**/path_to_file/jacoco.exec',
+   // classPattern: '**/coverage/**',
+   // sourcePattern: '**/coverage/**',
+    //inclusionPattern: '**/*.class'
+//)
+  // } 
 
   }
 }
