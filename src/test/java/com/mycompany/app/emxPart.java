@@ -1,17 +1,3 @@
-/*
- ** ${CLASS:MarketingFeature}
- **
- ** Copyright (c) 1993-2017 Dassault Systemes. All Rights Reserved.
- ** This program contains proprietary and trade secret information of
- ** Dassault Systemes.
- ** Copyright notice is precautionary only and does not evidence any actual
- ** or intended publication of such program
- ** DSO 2013x.4 - Where Used Enhancements for Relationship Matrix
- ** DSO 2013x.4 -  Stages for Relationship Matrix
- ** DSO 2013x.4 , added for RalatinoShip Matrix-Rev3 Stages
- */
-//Merged by 2013x upgrade team start -
-//P&G: PLM V2 - Start
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Hashtable;
